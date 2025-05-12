@@ -1,37 +1,5 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
-#include "MeshGenerator.h"
-#include <map>
-#include "ProceduralMeshComponent.h"
-using namespace std;
-
-// Sets default values
-AMeshGenerator::AMeshGenerator()
-{
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
-	Mesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("ProceduralMesh"));
-	Mesh->SetupAttachment(GetRootComponent());
-}
-
-// Called when the game starts or when spawned
-void AMeshGenerator::BeginPlay()
-{
-	Super::BeginPlay();
-	
-	if (HexComplexity >= 1 && HexComplexity <= 8 && HexSide >= 10 && HexSide <= 100000)
-	{
-		ProcHexMeshCreate();
-	}
-}
-
-// Called every frame
-void AMeshGenerator::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-}
+// These functions are from the MeshGenerator script in the project
+// I have isolated them so that everything shown is my own work
 
 void AMeshGenerator::ProcHexMeshCreate()
 {
