@@ -1,4 +1,4 @@
-// These functions are from the PlayerCharacter script in the project
+// These functions are from the ToolsManagerComponent script in the project
 // I have isolated them so that everything shown is my own work
 
 void APlayerCharacter::TerrainBrushRaise() // Raises vertices as a brush
